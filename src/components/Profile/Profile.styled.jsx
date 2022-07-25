@@ -60,3 +60,7 @@ border-top: 1px solid #010101;
 export const Label = styled.span`
 font-weight: bold;
 `;
+
+export const Quantity = styled.span`
+font-weight: bold;
+`;

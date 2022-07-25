@@ -1,4 +1,5 @@
-import {Container, Thead, Tbody, Td} from "./Transaction.styled";
+import { Container, Thead, Tbody, Td } from "./Transaction.styled";
+import PropTypes from "prop-types";
 
 export const Transaction = ({ transactions }) => {
     return (
@@ -12,7 +13,6 @@ export const Transaction = ({ transactions }) => {
             </Thead>
             <Tbody>
                 {transactions.map(item => {
-                console.log(item);
                 return (
                         <tr key={item.id}>
                         <Td>{item.type}</Td>
@@ -24,4 +24,8 @@ export const Transaction = ({ transactions }) => {
             </Tbody>
         </Container>
         )
-    }
+}
+    
+Transaction.propTypes = {
+    transactions: PropTypes.array.isRequired
+}

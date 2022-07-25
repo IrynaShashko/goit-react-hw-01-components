@@ -1,4 +1,5 @@
-import {ContainerStatistic, Title, List, Li, Label, Percentage} from './Statistics.styled';
+import { ContainerStatistic, Title, List, Li, Label, Percentage } from './Statistics.styled';
+import PropTypes from 'prop-types'
 
 export const Statistics = ({ stats, title }) => {
   if (!title) {
@@ -20,4 +21,9 @@ export const Statistics = ({ stats, title }) => {
       </ContainerStatistic>
     )
   }
+}
+
+Statistics.propTypes = {
+  stats: PropTypes.array.isRequired,
+  title: PropTypes.string
 }

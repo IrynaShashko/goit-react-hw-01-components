@@ -1,4 +1,5 @@
-import { ContainerProfile, Img, UserName, InfoContainer, Tag, Location, Stats, Li, Label } from "./Profile.styled";
+import { ContainerProfile, Img, UserName, InfoContainer, Tag, Location, Stats, Li, Label, Quantity } from "./Profile.styled";
+import PropTypes from "prop-types";
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
     return (
@@ -12,20 +13,27 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
     <Stats>
         <Li>
             <Label>Followers</Label>
-            <span class="quantity">{stats.followers}</span>
+            <Quantity>{stats.followers}</Quantity>
         </Li>
         <Li>
             <Label>Views</Label>
-            <span class="quantity">{stats.views}</span>
+            <Quantity>{stats.views}</Quantity>
         </Li>
         <Li>
             <Label>Likes</Label>
-            <span class="quantity">{stats.likes}</span>
+            <Quantity>{stats.likes}</Quantity>
         </Li>
     </Stats>
     </ContainerProfile>
     );
 }
 
+Profile.propTypes = {
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    stats: PropTypes.object.isRequired
+}
 
 
