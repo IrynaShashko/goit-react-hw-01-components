@@ -1,4 +1,4 @@
-import {Container, Thead, Tbody} from "./Transaction.styled";
+import {Container, Thead, Tbody, Td} from "./Transaction.styled";
 
 export const Transaction = ({ transactions }) => {
     return (
@@ -15,9 +15,9 @@ export const Transaction = ({ transactions }) => {
                 console.log(item);
                 return (
                         <tr key={item.id}>
-                        <td>{item.type}</td>
-                        <td>{item.amount}</td>
-                        <td>{item.currency}</td>
+                        <Td>{item.type}</Td>
+                        <Td>{item.amount}</Td>
+                        <Td>{item.currency}</Td>
                         </tr>
                     );
             })}
