@@ -1,39 +1,48 @@
-import { ContainerProfile, Img, UserName, InfoContainer, Tag, Location, Stats, Li, Label, Quantity } from "./Profile.styled";
-import PropTypes from "prop-types";
+import {
+  ContainerProfile,
+  Img,
+  UserName,
+  InfoContainer,
+  Tag,
+  Location,
+  Stats,
+  Li,
+  Label,
+  Quantity,
+} from './Profile.styled';
+import PropTypes from 'prop-types';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
-    return (
+  return (
     <ContainerProfile>
-    <Img src={avatar} alt={avatar} />
-    <InfoContainer>
+      <Img src={avatar} alt={avatar} />
+      <InfoContainer>
         <UserName>{username}</UserName>
         <Tag>@{tag}</Tag>
         <Location>{location}</Location>
-            </InfoContainer>
-    <Stats>
+      </InfoContainer>
+      <Stats>
         <Li>
-            <Label>Followers</Label>
-            <Quantity>{stats.followers}</Quantity>
+          <Label>Followers</Label>
+          <Quantity>{stats.followers}</Quantity>
         </Li>
         <Li>
-            <Label>Views</Label>
-            <Quantity>{stats.views}</Quantity>
+          <Label>Views</Label>
+          <Quantity>{stats.views}</Quantity>
         </Li>
         <Li>
-            <Label>Likes</Label>
-            <Quantity>{stats.likes}</Quantity>
+          <Label>Likes</Label>
+          <Quantity>{stats.likes}</Quantity>
         </Li>
-    </Stats>
+      </Stats>
     </ContainerProfile>
-    );
-}
+  );
+};
 
 Profile.propTypes = {
-    username: PropTypes.string.isRequired,
-    tag: PropTypes.string.isRequired,
-    location: PropTypes.string.isRequired,
-    avatar: PropTypes.string.isRequired,
-    stats: PropTypes.object.isRequired
-}
-
-
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.object.isRequired,
+};
