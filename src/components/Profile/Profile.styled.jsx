@@ -7,7 +7,9 @@ export const ContainerProfile = styled.div`
   padding-left: 50px;
   padding-right: 50px;
   flex-direction: column;
-  background-color: #fdd;
+  background-color: #78bdfb;
+  border-radius: 4px;
+  box-shadow: rgb(66 68 90) 0px 0px 13px -3px;
   justify-content: center;
   align-items: center;
   color: #010101;
@@ -15,10 +17,13 @@ export const ContainerProfile = styled.div`
 
 export const Img = styled.img`
   width: 200px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background-color: #fff;
 `;
 
 export const UserName = styled.p`
-  font-size: 25px;
+  font-size: 24px;
   font-weight: bold;
   padding: 0;
   margin: 0;
@@ -45,16 +50,22 @@ export const Location = styled.p`
 export const Stats = styled.ul`
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   list-style: none;
-  padding: 40px 0;
+  width: 300px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding-left: 0;
   margin: 0;
+  background-color: #417aae;
 `;
 
 export const Li = styled.li`
-  padding: 20px;
+  padding: 15px;
+  width: 100px;
   display: flex;
   flex-direction: column;
-  border-top: 1px solid #010101;
+  border: 1px solid #0d3c67;
 `;
 
 export const Label = styled.span`
@@ -62,5 +73,5 @@ export const Label = styled.span`
 `;
 
 export const Quantity = styled.span`
-  font-weight: bold;
+  font-size: 16px;
 `;

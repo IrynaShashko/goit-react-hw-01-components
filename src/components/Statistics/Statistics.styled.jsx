@@ -24,7 +24,7 @@ export const Li = styled.li`
   display: flex;
   flex-direction: column;
   padding: 10px;
-  background-color: #fdd;
+  background-color: ${props => props.color};
   font-size: 16px;
   width: 40px;
   border: 1px solid #010101;
